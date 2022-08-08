@@ -12,5 +12,6 @@ control 'aws-4' do
     end
 	
 	describe aws_security_groups do
-	  its('entries.count') { should be <= MAX_NUMBER_OF_SECURITY_GROUPS }
+          its('entries.count') { should be <= MAX_NUMBER_OF_SECURITY_GROUPS }
+    end
 end
