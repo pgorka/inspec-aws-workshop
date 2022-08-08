@@ -1,13 +1,17 @@
 Basic setup for InSpec tests in AWS
 
 **Preconditions**
-Export your AWS credentials as environment variables
+Configure your AWS credentials
 ```bash
-# Example configuration
-export AWS_ACCESS_KEY_ID="AKIAJUMP347SLS66IGCQ"
-export AWS_SECRET_ACCESS_KEY="vD2lfoNvPdwsofqyuO9jRuWUkZIMqisdfeFmkHTy7ON+w"
-export AWS_REGION="eu-west-3"
+sudo su
+aws configure
 ```
+# Example configuration
+AWS Access Key ID [None]: AKIAJUMP347SLS66IGCQ
+AWS Secret Access Key [None]: vD2lfoNvPdwsofqyuO9jRuWUkZIMqisdfeFmkHTy7ON+w
+Default region name [None]: eu-west-2
+Default output format [None]: json
+
 **Configuration**
 1. Clone [inspec-aws-workshop](https://github.com/pgorka/inspec-aws-workshop "inspec-aws-workshop") repository into your user's home directory (/home/username)
 2. Open inspec-aws-workshop directory
@@ -24,6 +28,10 @@ cd aws-inspec
 ```
 and modify the inputs.rb file using a text editor of choice.
 Fill in the values for the keys present in the file.
+```bash
+# Example
+vim inputs.rb
+```
 4. Install inspec
 ```bash
 sudo su
