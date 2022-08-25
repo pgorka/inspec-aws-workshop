@@ -1,2 +1,2 @@
 # inspec-aws-workshop
-Basic setup for InSpec tests in AWS
+Final setup for InSpec tests in AWS
