@@ -15,7 +15,7 @@ control 'aws-2' do
       its ('state') { should eq 'available' }
       its ('associated_ipv6_cidr_blocks') { should be_empty }
       its ('owner_id') { should eq OWNER_ID }
-      its ('tags') { should include({"Name"=>"vpc-terraform-xxxx"}) }
+      its ('tags') { should include({"Name"=>VPC_NAME}) }
       it  { should be_available }
     end
 end
