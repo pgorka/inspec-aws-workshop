@@ -14,8 +14,13 @@ Default region name [None]: eu-west-2
 Default output format [None]: json
 ```
 **Setup**
-1. Clone [inspec-aws-workshop](https://github.com/pgorka/inspec-aws-workshop "inspec-aws-workshop") repository into your user's home directory (/home/username)
-2. Open inspec-aws-workshop directory
+1. Install inspec
+```bash
+cd ~/inspec-aws-workshop
+curl https://omnitruck.chef.io/install.sh | sudo bash -s -- -P inspec
+```
+2. Clone [inspec-aws-workshop](https://github.com/pgorka/inspec-aws-workshop "inspec-aws-workshop") repository into your user's home directory (/home/username)
+3. Open inspec-aws-workshop directory
 ```bash
 cd inspec-aws-workshop
 ```
@@ -23,7 +28,7 @@ and checkout initial-tests branch
 ```bash
 git checkout initial_tests
 ```
-3. Open aws-inspec directory
+4. Open aws-inspec directory
 ```bash
 cd aws-inspec
 ```
@@ -33,12 +38,7 @@ Fill in the values for the keys present in the file.
 # Example
 vim inputs.rb
 ```
-4. Install inspec
-```bash
-cd ~/inspec-aws-workshop
-curl https://omnitruck.chef.io/install.sh | sudo bash -s -- -P inspec
-```
-5. Launch initial-tests
+4. Launch initial-tests
 ```bash
 inspec exec aws-inspec -t aws://
 ```
