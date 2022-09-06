@@ -38,7 +38,7 @@ Fill in the values for the keys present in the file.
 # Example
 vim inputs.rb
 ```
-4. Launch initial-tests
+5. Launch initial-tests
 ```bash
 inspec exec aws-inspec -t aws://
 ```
